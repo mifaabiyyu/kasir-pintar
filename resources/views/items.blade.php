@@ -2,9 +2,26 @@
 @section('title', 'Item')
 
 @section('script')
+<script>
+  var rolesCheck = false;
+</script>
+  @if (Auth::check())
+      <script>
+         var loggedIn = true;
+      </script>
+      @if (auth()->user()->hasRole('Admin'))
+      <script>
+        rolesCheck = true;
+     </script>
+      @else
+          
+      @endif
+  @else
+      <script>
+        var loggedIn = false;
+      </script>
+  @endif
   <script>
-    var loggedIn = "{{ $checkAuth }}";
-    var rolesCheck = "{{ $checkAdmin }}";
     console.log(loggedIn);
     console.log(rolesCheck);
 
@@ -46,7 +63,9 @@
                     
                     <div class="table-responsive">
                         <div class="d-flex justify-content-end">
-                            <button  class="text-end bg-success p-2 text-white rounded " data-bs-toggle="modal" data-bs-target="#addItemModal">Add Item</button>
+                          @auth
+                          <button  class="text-end bg-success p-2 text-white rounded " data-bs-toggle="modal" data-bs-target="#addItemModal">Add Item</button>
+                          @endauth
                         </div>
                         <table class="table table-striped" id="item_table">
                             <thead>
@@ -58,7 +77,7 @@
                                     <th scope="col">Stock</th>
                                     <th scope="col">Status</th>
                                     <th scope="col"></th>
-                                </tr>
+                                  </tr>
                               </thead>
                               <tbody>
                              

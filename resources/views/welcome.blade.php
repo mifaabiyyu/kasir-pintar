@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title', 'Item')
+@section('title', 'Mifa Abiyyu')
 
 @section('script')
     <script src="{{ asset('table/item-table.js') }}"></script>
@@ -24,15 +24,23 @@
             <div  class="p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none  motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
                 <div class="">
                     <div class="flex ">
-                        <div class="h-16 w-16 bg-red-50 dark:bg-red-800/20 flex items-center justify-center rounded-full">
+                        {{-- <div class="h-16 w-16 bg-red-50 dark:bg-red-800/20 flex items-center justify-center rounded-full">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-7 h-7 stroke-red-500">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
                             </svg>
-                        </div>
-                        <h2 class="mt-3  text-xl font-semibold text-gray-900 ">&nbsp; Data Item</h2>
-                    </div>
+                        </div> --}}
+                        {{-- <h2 class="mt-3  text-xl font-semibold text-gray-900 ">&nbsp; Mifa Abiyyu</h2> --}}
+                      </div>
+                      <div class="flex items-center justify-center">
+                        <h2 class="fw-bolder fs-4">Hello My Name Mifa Abiyyu</h2>
+                        
+                      </div>
+                      <br>
+                      <div class="flex items-center justify-center">
+                        <a href="https://mifa-abiyyu.vercel.app" target="_blank" class="text-center bg-success p-2 text-white rounded-full ">Go To My Profile</a>
+                      </div>
                     
-                    <div class="table-responsive">
+                    {{-- <div class="table-responsive">
                         <div class="d-flex justify-content-end">
                             <button  class="text-end bg-success p-2 text-white rounded " data-bs-toggle="modal" data-bs-target="#addItemModal">Add Item</button>
                         </div>
@@ -52,7 +60,7 @@
                               </tbody>
                         </table>
                     </div>
-                  
+                   --}}
                 </div>
 
                
